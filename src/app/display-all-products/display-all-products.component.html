@@ -1,0 +1,37 @@
+<app-header></app-header>
+<body>
+  <div class="container">
+      <p style="background-color: black; color: white; font-size: 20px">Products</p>
+  </div>
+
+  <div class="container">
+      <table class="table table-bordered" >
+  <thead>
+    <tr>
+      <th>Product Image</th>
+      <th>Product info</th>
+      <th>Product Price</th>
+      
+      <th></th>
+    </tr>
+  </thead>
+      <tbody>
+      <tr *ngFor="let product of products" >
+        <td><img [src]="product.proImg1" style="width: 70px; height: 90px"/></td>
+        <td><a>{{product.proName}}</a><br>
+            <a><i>{{product.proBrand}}</i></a><br>
+            <a>Specification :{{product.proDescription}}</a>
+        </td>
+        <td>Price:{{product.proPrice}}/-</td>                       
+        <td>
+          <button type="button" class="btn btn-block" style="background-color:chartreuse" (click)="addToCart(product.proId)">Add To Cart</button>
+          <button type="buton" class="btn btn-block" style="background-color:rgb(155, 81, 81)" (click)="addToWishlist(product.proId)">add to wishlist</button>
+          <button type="buton" class="btn btn-block" style="background-color:darkgreen">Buy Now</button>
+        </td>
+      </tr>
+          </tbody>
+      </table>
+  </div>
+</body>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

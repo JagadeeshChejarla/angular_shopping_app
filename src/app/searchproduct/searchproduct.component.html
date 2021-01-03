@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="card-group my-4">
+  <div class="card" >
+      <div class="card-body">
+      <table *ngFor="let product of products">
+     <th><img [src]="product.pImage1" class="card-img-top" alt="..." style="width: 100px; height: 100px;"></th> 
+   
+     <tr> <p class="card-title">Product Name:{{product.pName}}</p></tr>
+      <tr><p class="card-text">Price:{{product.pPrice}}/-</p></tr>
+      <tr><p class="card-text">Description:{{product.pDescription}}</p></tr>
+     <th><button id ="cart" type="button" class="btn btn-warning" name="cart" (click)="addToCart(product.pId)" >Add to Cart</button></th> 
+  </table>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

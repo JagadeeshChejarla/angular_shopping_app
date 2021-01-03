@@ -1,0 +1,41 @@
+<!-- Default input -->
+<app-header></app-header>
+<div id="inp">
+<label for="exampleForm2">Brand</label>
+<input  type="text" id="exampleForm2" class="form-control" [(ngModel)]=brand>
+<label for="exampleForm2">Price1</label>
+<input  type="text" id="exampleForm2" class="form-control" [(ngModel)]=p1>
+<label for="exampleForm2">Price2</label>
+<input  type="text" id="exampleForm2" class="form-control" [(ngModel)]=p2>
+<button type="button" class="btn btn-danger" value="brand" name="brand" (click)="onFilterClick()" >Proceed</button>
+</div>
+
+
+<body>
+  <div class="container">
+      <p style="background-color: black; color: white; font-size: 20px">Products</p>
+  </div>
+
+  <div class="container">
+      <table class="table table-bordered" >
+ 
+      <tbody>
+      <tr *ngFor="let product of products" >
+        <td><img [src]="product.pImage1" style="width: 70px; height: 90px"/></td>
+        <td><a>{{product.pName}}</a><br>
+            <a><i>{{product.pBrand}}</i></a><br>
+            <a>Specification :{{product.pDescription}}</a>
+        </td>
+        <td>Price:{{product.pPrice}}/-</td>                       
+        <td>
+          <button type="button" class="btn btn-block" style="background-color:chartreuse" (click)="addToCart(product.pId)">Add To Cart</button>
+          <button type="buton" class="btn btn-block" style="background-color:rgb(155, 81, 81)" (click)="addToWishlist(product.pId)">add to wishlist</button>
+          <button type="buton" class="btn btn-block" style="background-color:darkgreen">Buy Now</button>
+        </td>
+      </tr>
+          </tbody>
+      </table>
+  </div>
+</body>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

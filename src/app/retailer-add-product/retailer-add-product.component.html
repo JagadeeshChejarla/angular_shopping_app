@@ -1,0 +1,51 @@
+<app-retailerheader></app-retailerheader>
+
+<form class="" style="padding: 5% 30% ;">
+    <fieldset>
+      <legend style="position:static;">Add New Product</legend>
+     
+      <div class="form-group">
+        <label >Product-Name</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t2" placeholder="Product-Name" [(ngModel)]="product.pName">
+      </div>
+      <div class="form-group">
+        <label >Product-Category </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t3" placeholder="Product-Category" [(ngModel)]="product.pCategory">
+      </div>
+      <div class="form-group">
+        <label >Product Sub-Category </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t4" placeholder="Product Sub-Category" [(ngModel)]="product.pSubCategory">
+      </div>
+      <div class="form-group">
+        <label >Product Description  </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t5" placeholder="Product Description" [(ngModel)]="product.pDescription">
+      </div>
+      <div class="form-group">
+        <label >Product Quantity  </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t6" placeholder="Product Quantity" [(ngModel)]="product.pQty">
+      </div>
+      <div class="form-group">
+        <label >Product Price</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t7" placeholder="Product Price" [(ngModel)]="product.pPrice" >
+      </div>
+      <div class="form-group">
+        <label >Product Image1 </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t8" placeholder="Product Image1" [(ngModel)]="product.pImage1">
+      </div>
+      <div class="form-group">
+        <label >Product Image2 </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t9" placeholder="Product Image2" [(ngModel)]="product.pImage2">
+      </div>
+      <div class="form-group">
+        <label >Product Image3 </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t2" placeholder="Product Image3" [(ngModel)]="product.pImage3">
+      </div>
+      <div class="form-group">
+        <label >Product Brand</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="t2" placeholder="Product Brand" [(ngModel)]="product.pBrand">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="addProduct()" >Submit</button>
+    </fieldset>
+  </form>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

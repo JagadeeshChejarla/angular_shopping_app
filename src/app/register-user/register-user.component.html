@@ -1,0 +1,50 @@
+<app-header></app-header>
+<form class="" style="padding: 5% 30% ;">
+  <fieldset>
+    <legend style="position:static;">New User Registration</legend>
+   
+    <div class="form-group">
+      <label >Name</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" name="t2" placeholder="Enter Name" [(ngModel)]=userSignUp.uName>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="t3" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]=userSignUp.uEmail> 
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="t3" placeholder="Password" [(ngModel)]=userSignUp.uPassword>
+    </div>   
+  
+
+  <div>
+  <fieldset class="form-group">
+    <legend>Gender</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="M" checked="" [(ngModel)]=userSignUp.uGender>
+        Male
+      </label>      
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="F" [(ngModel)]=userSignUp.uGender>
+        Female
+      </label>
+    </div><br>
+    <div class="form-group">
+      <label >Mobile Number</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" name="t6" placeholder="Enter Mobile number" [(ngModel)]=userSignUp.uPhone>
+    </div>
+    <div class="form-group">
+      <legend for="exampleTextarea">Address</legend>
+      <textarea class="form-control" id="exampleTextarea" rows="5" name="t5"[(ngModel)]=userSignUp.uAddress></textarea>
+    </div>
+  </fieldset>
+</div>
+    <button type="submit" class="btn btn-primary" (click)="onRegisterClick()">Submit</button>
+  </fieldset>
+</form>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
